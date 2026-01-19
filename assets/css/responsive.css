@@ -1,0 +1,66 @@
+/* 平板 / 手机：隐藏菜单文字和右侧图标，显示汉堡 */
+@media (max-width: 1000px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .nav-icons {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .navbar {
+      padding: 0 20px;
+    }
+  
+    .logo-text {
+      font-size: 18px;
+    }
+
+    .carousel {
+        height: 320px;    /* 手机上矮一点，视觉更舒服 */
+      }
+  }
+  
+  /* 真正小屏：内容区改为上下排列，视频和文字 100% 宽度 */
+  @media (max-width: 768px) {
+  
+    /* 标题 + 各种内容块改为竖排 */
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* 视频和右侧文字都占满整行 */
+    .video-box,
+    .article-row .text-box {
+      width: 100%;
+      aspect-ratio: auto;   /* 不强制 16:9，按内容自适应高度 */
+    }
+  
+    /* 上下排列时水平居中 */
+    .article-row {
+      align-items: center;
+    }
+  }
+  
+  /* 更小屏：logo 字号再缩小一点（可选） */
+  @media (max-width: 600px) {
+    .logo-text {
+      font-size: 16px;
+    }
+  }
+
+
+
+  @media (max-width: 768px) {
+    .carousel {
+      height: 280px;    /* 手机上矮一点，视觉更舒服 */
+    }
+  }
+  
+  
+  

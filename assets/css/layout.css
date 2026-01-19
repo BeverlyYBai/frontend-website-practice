@@ -1,0 +1,464 @@
+/* ===== NAVBAR ===== */
+
+.navbar {
+  width: 100%;
+  height: 56px;
+  padding: 0 35px;
+  background: var(--primary);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;     /* logo 和菜单之间的距离 */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* 大屏右侧图标 */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.icon-btn img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+  transition: 0.2s;
+}
+
+.icon-btn:hover img {
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px var(--accent));
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
+  transition: 0.2s ease;
+}
+
+.icon-btn:hover .nav-icon {
+  stroke: #0A84FF;      /* hover 高亮 */
+}
+
+
+
+
+/* ===== HERO / CAROUSEL ===== */
+
+/* 轮播容器：宽度 100%，高度固定 */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;        /* 大屏高度，可以自己调，比如 380 / 450 */
+  overflow: hidden;     /* 超出的部分隐藏 */
+}
+
+/* 包裹图片的容器 */
+.carousel-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* 每一张图片 */
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* 铺满，不留黑边，会稍微裁切 */
+  object-position: center top;  /* 以中间为锚点，还可以改 top / bottom */
+  border-radius: 0;
+}
+
+.slide.active {
+  display: block;
+}
+
+
+
+/* 轮播左右按钮 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;         /* 去掉圆圈 */
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.arrow-icon {
+  width: 28px;         /* 箭头尺寸 */
+  height: 28px;
+  stroke: white;
+  opacity: 0.8;
+  transition: 0.2s ease;
+
+  
+}
+
+
+
+.carousel-btn:hover .arrow-icon {
+  opacity: 1;
+  stroke: #0A84FF;     /* hover 蓝色高亮 */
+  transform: scale(1.1);
+}
+
+.carousel-btn.prev { left: 20px; }
+.carousel-btn.next { right: 20px; }
+
+
+/* 底部小圆点 */
+.carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: 0.2s ease;
+}
+
+.carousel-dots .dot.active {
+  background: #0A84FF;
+  transform: scale(1.2);
+}
+
+/* 小屏按钮略微缩小 */
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+}
+
+
+
+
+/* ===== CONTENT ===== */
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 标题 */
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;      /* 原来 18px -> 稍微拉开一点 */
+}
+
+/* 上下那两段文字 */
+.article-paragraph {
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.75;        /* 行距稍微大一点，看着没那么挤 */
+  margin-top: 4px;
+  margin-bottom: 28px;      /* 区块之间拉开一点 */
+  text-align: justify;      /* 两端对齐 */
+  text-justify: inter-word; /* 单词间距微调，让左右更齐 */
+}
+
+/* 左视频 + 右文字这一行 */
+.article-row {
+  margin: 32px 0 36px;      /* 前后间距再拉大一点 */
+  gap: 48px;                /* 左右之间多一点空隙 */
+  align-items: flex-start;  /* 顶到上边对齐 */
+}
+
+.content p,
+.article-row p,
+.article-paragraph {
+    text-align: justify;
+    text-align-last: left; /* 避免最后一行拉伸 */
+}
+
+
+
+.text-box h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.text-box p {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.article-row .text-box {
+  width: 50%;
+}
+
+
+.video-box {
+  width: 50%;
+  aspect-ratio: 16 / 9;  /* 大屏幕确保 16:9 比例 */
+  background: var(--secondary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.video-box video,
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+/* ========== FOOTER ========== */
+
+.footer {
+  background: #000;
+  color: #f5f5f5;
+  padding: 48px 0 24px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+/* 标题按钮：大屏像标题，小屏变下拉开关 */
+.footer-title {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 12px;
+  border: none;
+  background: none;
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default; /* 大屏默认不可点击（JS 会控制小屏时可点） */
+}
+
+.footer-toggle-icon {
+  display: none; /* 只在小屏显示 */
+}
+
+/* 链接列表 */
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #d0d0d0;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-links a:hover {
+  color: var(--accent, #0a84ff);
+}
+
+/* 底部版权 */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding: 0 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ---------- 响应式：小屏幕变下拉菜单 ---------- */
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 32px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 0;  /* 不要竖直间距，线条紧贴 */
+  }
+
+  .footer-column {
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* 第一行不要上边线 */
+  .footer-column:first-child {
+    border-top: none;
+  }
+
+  /* 最后一行加下边线，形成一个完整块 */
+  .footer-column:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* ★ 标题行：用上下等量 padding + flex 垂直居中 */
+  .footer-title {
+    width: 100%;
+    padding: 20px 0;               /* 上下都是 12px，视觉就居中 */
+    margin: 0;
+    display: flex;
+    align-items: center;           /* 垂直居中 */
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .footer-toggle-icon {
+    font-size: 20px;
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  /* 默认收起内容  ---- 展开区大气版样式 */
+  .footer-links {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 0;                     /* 展开前不占空间 */
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+  /* 展开后 */
+.footer-column.active .footer-links {
+  max-height: 500px;                /* 足够大即可 */
+  padding: 12px 0 20px 0;           /* ★ 展开后增加上下留白，看起来高端 */
+}
+
+/* 展开后的链接样式 */
+.footer-links a {
+  display: block;
+  padding: 10px 0;                  /* 每个链接更宽松 */
+  font-size: 15px;
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 12px;                /* ★ 向右缩进，更有层级感 */
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* 图标变成“×” */
+.footer-column.active .footer-toggle-icon {
+  transform: rotate(45deg);         /* + → × */
+}
+
+  /* 解决“最下面多一条线”：小屏去掉版权上面的那条线 */
+  .footer-bottom {
+    border-top: none;
+    margin-top: 32px;
+  }
+}
+
+
+

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- 让Google知道我是谁 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hao Digital Solutions" />
+    <meta name="twitter:description" content="Digital transformation & software engineering solutions." />
+    <meta name="twitter:image" content="https://yourdomain.com/assets/images/preview.jpg" />
+
+
+    <!-- 让网站在社交媒体分享时很好看 -->
+    <meta property="og:title" content="Hao Digital Solutions | Digital Innovation" />
+    <meta property="og:description" content="We help businesses achieve digital transformation, automation, and intelligent solutions." />
+    <meta property="og:image" content="https://yourdomain.com/assets/images/preview.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+
+    <!-- Twitter卡片 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hao Digital Solutions" />
+    <meta name="twitter:description" content="Digital transformation & software engineering solutions." />
+    <meta name="twitter:image" content="https://yourdomain.com/assets/images/preview.jpg" />
+
+
+
+    <title>Hao Digital Solutions | USA</title>
+
+
+    <!-- 字体优化 提升加载速度 + 字体美观 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- 标签页小图标 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/LOGO.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/LOGO.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/LOGO.png">
+    <link rel="manifest" href="site.webmanifest">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header class="navbar" id="navbar">
+
+  <!-- 左侧：Logo + 文本 + 导航菜单 -->
+  <div class="nav-left">
+      <div class="brand">
+          <img src="assets/images/icons/logo.png" class="logo-img" alt="Logo">
+      </div>
+
+      <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Book Online</a>
+          <a href="#">Solutions</a>
+          <a href="#">Online Store</a>
+          <a href="#">Blog</a>
+      </nav>
+  </div>
+
+  <!-- 右侧：图标 + 汉堡 -->
+  <div class="nav-right">
+      <div class="nav-icons">
+
+          <!-- 搜索图标 -->
+          <button class="icon-btn" aria-label="Search">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+          </button>
+
+          <!-- 购物车图标 -->
+          <button class="icon-btn" aria-label="Cart">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"/>
+                  <circle cx="20" cy="21" r="1"/>
+                  <path d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+          </button>
+
+          <!-- 用户图标 -->
+          <button class="icon-btn" aria-label="Login">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M4 21v-2a4 4 0 0 1 3-3.87"/>
+                  <circle cx="12" cy="7" r="4"/>
+              </svg>
+          </button>
+
+      </div>
+
+      <!-- 小屏汉堡按钮 -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+  </div>
+</header>
+
+
+<!-- 手机侧边菜单（包含导航 + 搜索/购物车/登录） -->
+<div class="mobile-menu" id="mobileMenu">
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Book Online</a>
+        <a href="#">Solutions</a>
+        <a href="#">Online Store</a>
+        <a href="#">Blog</a>
+
+        <hr>
+
+        <a href="#">Search</a>
+        <a href="#">Cart</a>
+        <a href="#">Login</a>
+    </nav>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+
+<!-- ========== HERO / CAROUSEL ========== -->
+<section class="carousel">
+  <div class="carousel-wrapper">
+      <img src="assets/images/hero/banner1.jpg" class="slide active" alt="">
+      <img src="assets/images/hero/banner2.jpg" class="slide" alt="">
+      <img src="assets/images/hero/banner3.jpg" class="slide" alt="">
+      <img src="assets/images/hero/banner4.jpg" class="slide" alt="">
+  </div>
+
+  <!-- 上一张 / 下一张 按钮 -->
+  <button class="carousel-btn prev">
+    <svg viewBox="0 0 24 24" class="arrow-icon">
+      <path d="M15 6l-6 6 6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <button class="carousel-btn next">
+    <svg viewBox="0 0 24 24" class="arrow-icon">
+      <path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+
+  <!-- 小圆点容器（点会由 JS 自动生成） -->
+  <div class="carousel-dots"></div>
+</section>
+
+
+
+
+<!-- ========== PROFESSIONAL · TRUSTWORTHY SECTION ========== -->
+<section class="container section">
+
+  <!-- 小块1：标题 -->
+  <h1 class="page-title">Professional · Trustworthy</h1>
+
+  <!-- 小块2：标题下面的一段文字 -->
+  <p class="article-paragraph">
+    Hao Digital Solutions LLC is a digital solutions provider based in California, USA. We are committed to delivering highly feasible digital transformation solutions and software engineering project solutions. Helping clients achieve high efficiency, low cost, and high returns is the core value of our services. Therefore, we primarily offer strategic, top-level planning services.
+
+    Starting in November 2025, Hao Digital will initially provide high-value services to local U.S. companies, beginning its service deployment in November 2025.
+  </p>
+
+  <!-- 小块3：左视频 + 右段落 -->
+  <div class="content article-row">
+    <div class="img-box video-box">
+      <video controls poster="assets/images/hero/飞鹰1号002.png">
+          <source src="assets/video/飞鹰1号003（有声）.mp4" type="video/mp4">
+      </video>
+  </div>
+  
+
+      <div class="text-box">
+          <p>
+            Innovation is the core competitiveness of the Hao Digital team. We believe that only a highly innovative team can create more new value for clients. Therefore, innovation will exist in every service project we provide.
+
+            We will continue to conduct innovative research and practice in new business models, new management theories, new technologies and scientific theories, software engineering, and new algorithms. Facts have proven that innovation can solve many development problems!
+          </p>
+      </div>
+  </div>
+
+  <!-- 小块4：最后的一段文字 -->
+  <p class="article-paragraph">
+    Our services will mainly focus on areas such as enterprise digital transformation, software engineering technology, automation and intelligent systems, data-driven enterprise management, big data marketing, standardized documentation, expert consulting services, and digital products.
+
+    Please believe this: with the professional support of the Hao Digital team, you will be able to quickly solve many development problems. Hao Digital will become a reliable “third-party intelligent brain,” ready to appear whenever you need us!
+  </p>
+
+</section>
+
+
+<div class="section-divider"></div>
+
+
+<!-- ========== ACCESS NAVIGATION / CARDS ========== -->
+<section class="container section">
+    <h2 class="section-title">Access Navigation</h2>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-img"><img src="assets/images/products/Hao Digital Solutions.jpg" alt="Business Consulting" class="card-img"></div>
+            <h3>Business Consulting</h3>
+            <p>If you want our professional support or need service details, please email us directly. For example, if your business or farm requires expert support for digital transformation, feel free to reach out.
+              Once we receive your email, we will contact you as soon as possible.</p>
+            <a href="#">Email Now →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-img"><img src="assets/images/products/Schedule Service.jpg" alt="Schedule Service" class="card-img"></div>
+            <h3>Schedule Service</h3>
+            <p>If you need to book one or more services we provide to help complete one or more tasks, please book online for the services you need.
+              Our suggestion is to communicate with us and confirm service intent before booking.</p>
+            <a href="#">Schedule Now →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-img"><img src="assets/images/products/Purchase Products.jpg" alt="Purchase Products" class="card-img"></div>
+            <h3>Purchase Products</h3>
+            <p>In our online store, you can buy many digital products, including industry data, document templates, source code, and media like videos and images.
+              Additionally, resources such as novel copyrights, patent technologies, film copyrights, innovation research outputs, and advertising creatives are available for purchase.</p>
+            <a href="#">Purchase Now →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-img"><img src="assets/images/products/IT Support.jpg" alt="IT Support" class="card-img"></div>
+            <h3>IT Support</h3>
+            <p>If you need technical support from professionals such as digital experts, software engineers, hardware engineers, or cybersecurity specialists, please contact us directly. We will reply as soon as possible.
+              We typically respond within 1–2 business days.</p>
+            <a href="#">Get Support →</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Us -->
+    <div class="footer-column">
+      <button class="footer-title" type="button">
+        <span>About Us</span>
+        <span class="footer-toggle-icon">+</span>
+      </button>
+      <ul class="footer-links">
+        <li><a href="#">About Hao Digital</a></li>
+        <li><a href="#">HAO Automation Lab</a></li>
+        <li><a href="#">Expert Team</a></li>
+        <li><a href="#">Company News</a></li>
+        <li><a href="#">Join Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-column">
+      <button class="footer-title" type="button">
+        <span>Resources</span>
+        <span class="footer-toggle-icon">+</span>
+      </button>
+      <ul class="footer-links">
+        <li><a href="#">Talent &amp; Experts</a></li>
+        <li><a href="#">Online Booking</a></li>
+        <li><a href="#">Standardized Documents</a></li>
+        <li><a href="#">Online Store</a></li>
+        <li><a href="#">Online Courses</a></li>
+      </ul>
+    </div>
+
+    <!-- Cooperation -->
+    <div class="footer-column">
+      <button class="footer-title" type="button">
+        <span>Cooperation</span>
+        <span class="footer-toggle-icon">+</span>
+      </button>
+      <ul class="footer-links">
+        <li><a href="#">Digital Transformation</a></li>
+        <li><a href="#">Big Data Marketing</a></li>
+        <li><a href="#">Software Engineering</a></li>
+        <li><a href="#">Employee Training</a></li>
+        <li><a href="#">Experts &amp; Advisors</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="footer-column">
+      <button class="footer-title" type="button">
+        <span>Contact Us</span>
+        <span class="footer-toggle-icon">+</span>
+      </button>
+      <ul class="footer-links">
+        <li><a href="tel:+16264957176">Phone: +1 (626) 495 7176</a></li>
+        <li><a href="mailto:youremail@example.com">Email: youremail@example.com</a></li>
+        <li><a href="#">Fax: N/A</a></li>
+        <li><a href="#">WhatsApp: +1 (626) 495 7176</a></li>
+        <li><a href="#">Address: California</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2035 Hao Digital Solutions LLC</p>
+  </div>
+</footer>
+
+
+
+
+<!-- JS -->
+<script src="assets/js/carousel.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
